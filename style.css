@@ -1,0 +1,58 @@
+body {
+    background-color:rgb(171, 171, 171);  
+    }
+  
+
+
+    .form_item{
+        margin: 0px 0px 10px 0px;
+      }
+      .form_input{
+        height:50px;
+        border-radius:5px;
+        width:100%;
+        font-size:12px;
+        
+      }
+      .form_input2{
+        border-radius:5px;
+        width:100%;
+        font-size:12px;
+        height:150px;
+        
+      }
+      .checkbox_label{
+        font-size:12px;
+      }
+     .form-popup div input {
+        border: 1px solid #1906f2;
+    }
+    .form-popup div select {
+        border: 1px solid #1906f2;
+       
+    }
+    .form-popup div textarea {
+        border: 1px solid #1906f2;
+    }
+      .form_input._error{
+        box-shadow:0 0 15px #ff0000;
+      }
+     
+      textarea.form_input{
+        min-height:100px;
+      }
+     
+      .form_button{
+        margin-top: 20px;
+        margin-bottom:40px;
+        display: inline-block;
+        width: 100%;
+        background: transparent;
+        padding: 8px;
+        color:#1906f2;
+        border: 1px solid #1906f2;
+        border-radius: 5px;
+        text-align: center;
+        outline: none;
+        text-decoration: none;
+      }

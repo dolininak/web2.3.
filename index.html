@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="bootstrap.min.css" rel="stylesheet">
+    
+    <title>Задание 8</title>
+    <link rel="stylesheet" href="style.css">
+
+
+</head>
+<body>
+
+    <div class=" m-5 row d-flex ">
+        <div class="col-12 d-flex justify-content-center p-2">
+            <div class="form-popup col-10 m-5" id="myForm">
+                <form action="index.php" method="POST" id="form" class="form_body">
+                    <div class="form_item">
+                        <input id='formName' placeholder="Ваше имя" type="text" name="name" class="form_input _req">
+                    </div>
+                    <div class="form_item">
+                        <input id='formTel' placeholder="Телефон" type="text" name="tel" class="form_input _req _tel">
+                    </div>
+                    <div class="form_item">
+                        <input id='formEmail' placeholder="E-mail" type="text" name="email" class="form_input _req _email">
+                    </div>
+                    <div class="form_item">
+                        <input name="data" type="date"  value="2024-03-09" placeholder="Введите дату рождения" class="form_input _req _date">
+                    </div>
+                    <div class="form_item">
+                        <p><b>Ваш пол</b></p>
+                            <p><input name="pol" type="radio" value="female"> женский</p>
+                            <p><input name="pol" type="radio" value="male"> мужской</p>
+                    </div>
+                    <div class="form_item"> 
+                        <select multiple="multiple"  id="formLangu" name="langu[]"  class="form_input2 ">
+                            <option disabled>Выберете ваш любимый язык программирования</option>
+                            <option  value="s1">Pascal</option>
+                            <option value="s2">C</option>
+                            <option value="s3">C++</option>
+                            <option value="s4">JavaScript</option>
+                            <option value="s5">PHP</option>
+                            <option value="s6">Python</option>
+                            <option value="s7">Java</option>
+                            <option value="s8">Haskel</option>
+                            <option value="s9">Clojure</option>
+                            <option value="s10">Prolog</option>
+                            <option value="s11">Scala</option>
+                        </select>
+                    </div>
+                    <div class="form_item">
+                        <textarea id='formBio' placeholder="Ваша биография" name="bio" class="form_input"></textarea>
+                    </div>
+                    <div class="form_item">
+                        <div class="d-flex row m-2">
+                            <input id='formAgreement' type="checkbox" name="agreement" class="col-1 checkbox_input _req">
+                            
+                            <label for="formAgreement" class="col-10 checkbox_label"> с контрактом ознакомлен</label>
+                        </div>
+                    </div>
+                    <button type="submit" class="form_button" value="ok">Сохранить</button>
+                    
+        
+        
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+</body>
+</html>
