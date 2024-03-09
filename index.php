@@ -58,7 +58,7 @@ if (empty($_POST['bio']) ) {
   $errors = TRUE;
 }
 
-if(!isset($_POST['checkbox_name']) || $_POST['checkbox_name'] != 'ok') {
+if(!isset($_POST['checkbox_name']) || $_POST['checkbox_name'] != 'on') {
   print('Отметьте чекбокс.<br/>');
   $errors = TRUE;
 }
