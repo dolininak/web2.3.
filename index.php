@@ -45,9 +45,9 @@ if (!isset($_POST['pol']) || !in_array($_POST['pol'], array('male', 'female'))) 
 }
 
 $valid_languages = array("s1", "s2", "s3", "s4", "s5", "s6", "s7", "s8", "s9", "s10", "s11");
-$selected_languages = $_POST['langu[]']; 
+$selected_languages = $_POST['languages']; 
 foreach ($selected_languages as $langu) {
-    if (!isset($_POST['langu[]']) || !in_array($langu, $valid_languages)) {
+    if (!isset($_POST['languages']) || !in_array($langu, $valid_languages)) {
       print('Выберете языки.<br/>');
       $errors = TRUE;
     }
@@ -58,7 +58,7 @@ if (empty($_POST['bio']) ) {
   $errors = TRUE;
 }
 
-if(!isset($_POST['checkbox_name']) || $_POST['checkbox_name'] != 'on') {
+if(!isset($_POST['checkbox_name']) || $_POST['checkbox_name'] != 'ok') {
   print('Отметьте чекбокс.<br/>');
   $errors = TRUE;
 }
