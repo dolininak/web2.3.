@@ -46,12 +46,19 @@ if (!isset($_POST['pol']) || !in_array($_POST['pol'], array('male', 'female'))) 
 
 $valid_languages = array("100", "101", "102", "103", "104", "105", "106", "107", "108", "109", "110");
 $selected_languages = $_POST['languages']; 
-foreach ($selected_languages as $langu) {
-    if (!isset($_POST['languages']) || !in_array($langu, $valid_languages)) {
-      print('Выберете языки.<br/>');
-      $errors = TRUE;
+if (!isset($_POST['languages'])) {
+  print('Выберете языки.<br/>'); 
+  $errors = TRUE;
+} 
+else {
+    foreach ($selected_languages as $langu) {
+        if ( !in_array($langu, $valid_languages)) {
+          print('Выберете языки.<br/>');
+          $errors = TRUE;
+          break;
+        }
     }
-}
+  }
 
 if (empty($_POST['bio']) ) {
   print('Заполните биографию.<br/>');
