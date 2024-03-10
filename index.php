@@ -44,7 +44,7 @@ if (!isset($_POST['pol']) || !in_array($_POST['pol'], array('male', 'female'))) 
   $errors = TRUE;
 }
 
-$valid_languages = array("100", "101", "102", "103", "104", "105", "106", "107", "108", "109", "110");
+$valid_languages = array('100', '101', '102', '103', '104', '105', '106', '107', '108', '109', '110');
 $selected_languages = $_POST['languages']; 
 foreach ($selected_languages as $langu) {
     if (!isset($_POST['languages']) || !in_array($langu, $valid_languages)) {
