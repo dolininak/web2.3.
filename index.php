@@ -93,8 +93,9 @@ try {
         $_POST['bio'],
         $_POST['agreement']
     ]);
-    $stmt = $db->prepare("INSERT INTO programming_language SET languages = ?");
-    $stmt->execute([$_POST['languages']]);
+    foreach ($_POST['languages'] as $language) {
+      $stmt = $db->prepare("INSERT INTO programming_language (language) VALUES (?)");
+      $stmt->execute([$language]);}
 }
 catch(PDOException $e){
   print('Error : ' . $e->getMessage());
