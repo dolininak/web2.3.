@@ -94,8 +94,8 @@ try {
         $_POST['agreement']
     ]);
     foreach ($_POST['languages'] as $language) {
-      $stmt = $db->prepare("INSERT INTO programming_language (language) VALUES (?)");
-      $stmt->execute([$name]);}
+      $stmt = $db->prepare("INSERT INTO programming_language (name) VALUES (?)");
+      $stmt->execute([$language]);}
 }
 catch(PDOException $e){
   print('Error : ' . $e->getMessage());
