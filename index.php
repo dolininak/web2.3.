@@ -93,9 +93,15 @@ try {
         $_POST['bio'],
         $_POST['agreement']
     ]);
+    $application_id = $db->lastInsertId();
     foreach ($_POST['languages'] as $language) {
       $stmt = $db->prepare("INSERT INTO programming_language (languages) VALUES (?)");
-      $stmt->execute([$language]);}
+      $stmt->execute([$language]);
+    }
+    foreach ($_POST['languages'] as $programming_language_id) {
+      $stmt = $db->prepare("INSERT INTO application_programming_languages (application_id, programming_language_id) VALUES (?, ?)");
+      $stmt->execute([$application_id, $language_id]);
+    }
 }
 catch(PDOException $e){
   print('Error : ' . $e->getMessage());
