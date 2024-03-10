@@ -97,8 +97,9 @@ try {
     foreach ($_POST['languages'] as $language) {
       $stmt = $db->prepare("INSERT INTO programming_language (languages) VALUES (?)");
       $stmt->execute([$language]);
-    }
-    foreach ($_POST['languages'] as $programming_language_id) {
+
+      $programming_language_id = $db->lastInsertId();
+      
       $stmt = $db->prepare("INSERT INTO application_programming_language (application_id, programming_language_id) VALUES (?, ?)");
       $stmt->execute([$application_id, $programming_language_id]);
     }
