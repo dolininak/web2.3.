@@ -100,7 +100,7 @@ try {
     }
     foreach ($_POST['languages'] as $programming_language_id) {
       $stmt = $db->prepare("INSERT INTO application_programming_languages (application_id, programming_language_id) VALUES (?, ?)");
-      $stmt->execute([$application_id, $language_id]);
+      $stmt->execute([$application_id, $programming_language_id]);
     }
 }
 catch(PDOException $e){
