@@ -95,7 +95,7 @@ try {
     ]);
     foreach ($_POST['languages'] as $language) {
       $stmt = $db->prepare("INSERT INTO programming_language (language) VALUES (?)");
-      $stmt->execute([$language]);}
+      $stmt->execute([$name]);}
 }
 catch(PDOException $e){
   print('Error : ' . $e->getMessage());
